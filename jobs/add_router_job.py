@@ -67,7 +67,7 @@ def delete_device(device_id):
     """Delete a device"""
     r = requests.delete(f"{NAUTOBOT_URL}/api/dcim/devices/{device_id}/", headers=HEADERS)
     if r.status_code == 204:
-        print(f"✅ Device deleted successfully")
+        print(f"✅ Device deleted successfully hbgjghughj")
         return True
     print(f"❌ Failed: {r.status_code} - {r.text}")
     return False
