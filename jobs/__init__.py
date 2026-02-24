@@ -2,7 +2,7 @@ from nautobot.core.celery import register_jobs
 from nautobot.apps.jobs import Job, StringVar, ObjectVar
 from nautobot.dcim.models import Device, DeviceType, Location
 from nautobot.extras.models import Role, Status
-
+from .get_sh_version import GetShVersion
 
 class AddRouter(Job):
     class Meta:
@@ -45,4 +45,4 @@ class AddRouter(Job):
         self.logger.info(f"Router '{device_name}' created!", extra={"object": device})
 
 
-register_jobs(AddRouter)
+register_jobs(AddRouter, GetShVersion)
