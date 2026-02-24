@@ -11,8 +11,4 @@ class GetShVersion(Job):
         self.logger.info(result.stdout or result.stderr)
 ```
 
-**3. Push to GitHub**
-```
-git add get_sh_version.py
-git commit -m "Add get sh version job"
-git push
+
