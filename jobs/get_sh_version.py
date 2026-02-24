@@ -1,4 +1,4 @@
-from nautobot.extras.jobs import Job
+from nautobot.apps.jobs import Job
 
 class GetShVersion(Job):
     class Meta:
