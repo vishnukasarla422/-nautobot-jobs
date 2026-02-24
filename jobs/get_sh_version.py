@@ -9,6 +9,3 @@ class GetShVersion(Job):
         import subprocess
         result = subprocess.run(["sh", "--version"], capture_output=True, text=True)
         self.logger.info(result.stdout or result.stderr)
-```
-
-
